@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rencontres nationales 2026 Programme</title>
+<style>
+  @font-face {
+    font-family: 'Brown';
+    src: url('fonts/lineto-brown-light.woff2') format('woff2'),
+         url('fonts/lineto-brown-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Brown';
+    src: url('fonts/lineto-brown-regular.woff2') format('woff2'),
+         url('fonts/lineto-brown-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Brown';
+    src: url('fonts/lineto-brown-italic.woff2') format('woff2'),
+         url('fonts/lineto-brown-italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Brown';
+    src: url('fonts/lineto-brown-bold.woff2') format('woff2'),
+         url('fonts/lineto-brown-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Brown';
+    src: url('fonts/lineto-brown-bolditalic.woff2') format('woff2'),
+         url('fonts/lineto-brown-boldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+  }
+  :root{
+    --bg: #FFFFFF;
+    --surface: #F8F9FA;
+    --surface-2: #F1F3F5;
+    --line: rgba(0, 0, 0, 0.1);
+    --text: #12161A;
+    --text-dim: #5C656E;
+    --gold: #f90042;
+    --gold-dim: rgba(249, 0, 66, 0.12);
+
+    /* Couleurs des dispositifs */
+    --maternelle: #8ab85f;
+    --ecole: #e78514;
+    --college: #ff97af;
+    --passeurs: #84c3df;
+    --tous-dispositifs: #f90042;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Brown', sans-serif;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+
+  h1,h2,h3,.serif{
+    font-family:'Brown', sans-serif;
+    font-weight:700;
+    letter-spacing:0.01em;
+  }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 20px 80px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    padding:56px 0 28px;
+    text-align:left;
+    border-bottom:1px solid var(--line);
+    margin-bottom:8px;
+  }
+  .logo-mark{
+    display:inline-flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:10px;
+    flex-wrap: wrap;
+  }
+  .logo-img{
+    max-width:80px;
+    height:auto;
+  }
+  .logo-img.maclasse {
+    max-width:110px;
+  }
+  .logo-mark svg{ width:26px; height:26px; flex-shrink:0; }
+  .logo-mark span{
+    font-family:'Brown', sans-serif;
+    font-weight:400;
+    font-size:15px;
+    color:var(--text-dim);
+    line-height:1.15;
+  }
+  header h1{
+    font-size:clamp(30px, 6vw, 44px);
+    font-style:normal;
+    font-weight:700;
+    margin:0;
+    color:var(--text);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  header h1 span.highlight-title {
+    background-color: var(--gold);
+    color: #12161A;
+    padding: 2px 8px;
+    font-size: 0.45em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    vertical-align: middle;
+  }
+  
+  .subtitle-date {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: 700;
+    color: var(--text);
+    margin: 4px 0 22px;
+    line-height: 1.25;
+  }
+
+  header .meta{
+    color:var(--text-dim);
+    font-size:15px;
+    max-width:520px;
+  }
+  header .meta strong{ color:var(--text); font-weight:500; }
+
+  /* ---------- Tabs ---------- */
+  nav.tabs{
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    gap:4px;
+    background:var(--bg);
+    padding:14px 0;
+    overflow-x:auto;
+    border-bottom:1px solid var(--line);
+    margin-bottom:36px;
+    scrollbar-width:none;
+  }
+  nav.tabs::-webkit-scrollbar{ display:none; }
+  nav.tabs button{
+    flex-shrink:0;
+    background:none;
+    border:1px solid var(--line);
+    color:var(--text-dim);
+    font-family:'Brown', sans-serif;
+    font-size:14px;
+    font-weight:400;
+    padding:9px 16px;
+    border-radius:100px;
+    cursor:pointer;
+    transition:border-color .15s, color .15s, background .15s;
+  }
+  nav.tabs button .d{
+    display:block;
+    font-size:11px;
+    color:var(--text-dim);
+    font-weight:400;
+    margin-top:1px;
+  }
+  nav.tabs button.active{
+    color: #12161A;
+    background: var(--gold);
+    border-color: var(--gold);
+    font-weight: 700;
+  }
+  nav.tabs button.active .d{ color: #12161A; font-weight: 500; }
+  nav.tabs button:hover:not(.active){ border-color:var(--text-dim); color:var(--text); }
+
+  /* ---------- Day panels ---------- */
+  .panel{ display:none; }
+  .panel.active{ display:block; animation:fade .25s ease; }
+  @keyframes fade{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+
+  .day-title{
+    font-size:22px;
+    font-style:normal;
+    margin:0 0 28px;
+  }
+
+  .timeline{
+    position:relative;
+    padding-left:78px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:56px;
+    top:6px;
+    bottom:6px;
+    width:1px;
+    background:var(--line);
+  }
+
+  .slot{
+    position:relative;
+    margin-bottom:34px;
+  }
+  .slot .time{
+    position:absolute;
+    left:-78px;
+    top:2px;
+    width:66px;
+    text-align:right;
+    font-size:12.5px;
+    color:var(--text-dim);
+    font-weight:500;
+    line-height:1.35;
+  }
+
+  .slot-label{
+    font-size:11.5px;
+    color:var(--gold);
+    text-transform:none;
+    letter-spacing:0.02em;
+    margin-bottom:8px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .grid.cols-4{ grid-template-columns:repeat(2, 1fr); }
+  @media (max-width:520px){ .grid.cols-4{ grid-template-columns:1fr; } }
+
+  .card{
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:16px 18px;
+  }
+  .card.solo{ padding:20px 22px; }
+
+  /* Modificateurs de cartes selon les dispositifs */
+  .card.card-maternelle { background: #FFFFFF; border: 1.5px solid var(--maternelle); }
+  .card.card-ecole { background: #FFFFFF; border: 1.5px solid var(--ecole); }
+  .card.card-college { background: #FFFFFF; border: 1.5px solid var(--college); }
+  .card.card-passeurs { background: #FFFFFF; border: 1.5px solid var(--passeurs); }
+
+  .card h3{
+    font-size:16px;
+    font-weight:700;
+    font-style:normal;
+    margin:0 0 4px;
+    line-height:1.3;
+    padding-right:60px;
+  }
+  .card .card-subtitle{
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--gold);
+    margin:0 0 8px;
+  }
+  .card p{
+    margin:0;
+    font-size:14px;
+    color:var(--text-dim);
+  }
+  .card p strong {
+    font-weight:700;
+    color:var(--text);
+  }
+  .card .who{
+    display:block;
+    margin-top:8px;
+    font-size:13px;
+    color:var(--text);
+    font-weight:500;
+  }
+  .card .who small{
+    display:block;
+    font-weight:400;
+    color:var(--text-dim);
+    font-size:12.5px;
+    margin-top:1px;
+  }
+
+  /* Écriture Salle */
+  .room-text{
+    position:absolute;
+    top:12px;
+    right:16px;
+    font-size:12px;
+    font-weight:700;
+    color:#12161A;
+    line-height: 1;
+  }
+
+  /* Conteneur des badges */
+  .badges-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  /* Badges */
+  .device-badge, .type-badge {
+    font-size:11px;
+    font-weight:600;
+    font-style:normal;
+    padding:2px 8px;
+    border-radius:4px;
+    display: inline-block;
+  }
+
+  .device-badge { color:#12161A; }
+  .device-badge.maternelle-bg { background-color: var(--maternelle); }
+  .device-badge.ecole-bg { background-color: var(--ecole); }
+  .device-badge.college-bg { background-color: var(--college); }
+  .device-badge.passeurs-bg { background-color: var(--passeurs); }
+  .device-badge.tous-bg { background-color: var(--tous-dispositifs); color: #FFFFFF; }
+
+  .type-badge {
+    background-color: var(--surface-2);
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    font-weight: 500;
+  }
+
+  /* In-text dispositifs */
+  .maternelle { color: var(--maternelle); }
+  .ecole { color: var(--ecole); }
+  .college { color: var(--college); }
+  .passeurs { color: var(--passeurs); }
+
+  /* ---------- Styles cartes Highlight / Dépliables ---------- */
+  .card.highlight{
+    background: linear-gradient(180deg, rgba(249,0,66,0.06), rgba(249,0,66,0.01));
+    border-color: rgba(249,0,66,0.3);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .card.highlight:hover{
+    border-color: var(--gold);
+    background: linear-gradient(180deg, rgba(249,0,66,0.09), rgba(249,0,66,0.02));
+  }
+  .card.highlight h3{ color:var(--gold); }
+
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+    opacity: 0;
+  }
+
+  .card.highlight.open .collapsible-content {
+    max-height: 1000px;
+    transition: max-height 0.4s ease-in, opacity 0.3s ease-in 0.1s;
+    opacity: 1;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(249, 0, 66, 0.2);
+  }
+
+  .collapsible-content h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 14px 0 6px;
+    text-transform: none;
+  }
+  .collapsible-content h4:first-child { margin-top: 0; }
+
+  .collapsible-content p {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  .speaker-photo {
+    float: right;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 4px 0 10px 16px;
+    border: 2px solid var(--gold);
+    background-color: var(--surface-2);
+  }
+
+  .collapsible-content::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .toggle-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold);
+  }
+  .toggle-hint svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    transition: transform 0.2s ease;
+  }
+  .card.highlight.open .toggle-hint svg {
+    transform: rotate(180deg);
+  }
+
+  .note{
+    margin-top:10px;
+    padding:12px 16px;
+    background:var(--surface-2);
+    border-left:2px solid var(--gold);
+    border-radius:2px;
+    font-size:13.5px;
+    color:var(--text-dim);
+  }
+
+  /* ---------- Infos pratiques ---------- */
+  .info-block{ margin-bottom:30px; }
+  .info-block h2{
+    font-size:17px;
+    font-style:normal;
+    margin:0 0 12px;
+    color:var(--gold);
+  }
+  .info-block p, .info-block li{
+    font-size:14.5px;
+    color:var(--text-dim);
+    margin:0 0 8px;
+  }
+  .info-block ul{ margin:0; padding-left:18px; }
+  .info-block a{ color:var(--text); text-decoration:underline; text-decoration-color:var(--gold); }
+  .partners{
+    font-size:13.5px;
+    color:var(--text-dim);
+    line-height:1.7;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-top:6px;
+  }
+  .contact-row div{ font-size:14px; }
+  .contact-row strong{ display:block; color:var(--text); font-weight:500; margin-bottom:2px; }
+
+  /* ---------- Bandeau Partenaires ---------- */
+  .partners-section {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  .partners-group {
+    margin-bottom: 36px;
+  }
+
+  .partners-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .partners-group h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+    margin: 0 0 20px 0;
+    font-weight: 700;
+  }
+
+  .logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px 28px;
+  }
+
+  .logos-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .logos-grid a:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+  }
+
+  .logos-grid img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  footer{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--line);
+    font-size: 12.5px;
+    color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo-mark">
+      <a href="https://www.archipel-lucioles.fr" target="_blank" rel="noopener">
+        <img src="AL-LOGO-CARRE-RESEAU-RVB.png" alt="Logo L'archipel des lucioles" class="logo-img">
+      </a>
+      <a href="https://www.cnc.fr/cinema/ma-classe-au-cinema" target="_blank" rel="noopener">
+        <img src="logo ma classe au cinéma.png" alt="Logo Ma classe au cinéma" class="logo-img maclasse">
+      </a>
+    </div>
+    <h1>Rencontres nationales 2026 <span class="highlight-title">Programme</span></h1>
+    <div class="subtitle-date">24-25-26 novembre<br>Sarlat</div>
+    <p class="meta">Pré-programme des rencontres nationales des coordinations territoriales <strong class="maternelle">Maternelle au cinéma</strong>, <strong class="ecole">École et cinéma</strong>, <strong class="college">Collège au cinéma</strong> et <strong class="passeurs">Passeurs d'images</strong>, organisées par l'association nationale L'Archipel des lucioles.</p>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab-btn active" data-target="jour1">Jour 1<span class="d">Mar. 24 nov.</span></button>
+    <button class="tab-btn" data-target="jour2">Jour 2<span class="d">Mer. 25 nov.</span></button>
+    <button class="tab-btn" data-target="jour3">Jour 3<span class="d">Jeu. 26 nov.</span></button>
+    <button class="tab-btn" data-target="ressources">Espace<span class="d">Ressources</span></button>
+    <button class="tab-btn" data-target="infos">Infos<span class="d">pratiques</span></button>
+  </nav>
+
+  <!-- JOUR 1 -->
+  <section class="panel active" id="jour1">
+    <h2 class="day-title">Mardi 24 novembre</h2>
+    <div class="timeline">
+
+      <div class="slot">
+        <div class="time">09h30<br>—<br>12h30</div>
+        <div class="slot-label">En parallèle</div>
+        <div class="grid cols-4">
+          
+          <div class="card card-maternelle">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge maternelle-bg">Maternelle au cinéma</span>
+              <span class="type-badge">Projection &amp; Animation</span>
+            </div>
+            <p>Découverte du programme entrant et expérimentation des outils d'animation dédiés au jeune public.</p>
+            <p style="margin-top:8px;"><strong>Nom du film</strong><br>
+            Projection d'un programme entrant, en présence d'une classe de maternelle. Séance animée avec la nouvelle version du jeu « Sortie de cinéma 3-6 ans ».</p>
+          </div>
+
+          <div class="card card-ecole">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge ecole-bg">École et cinéma</span>
+              <span class="type-badge">Projection &amp; Échange</span>
+            </div>
+            <p>Visionnage d'un film du catalogue suivi d'un temps de discussion sur son accompagnement pédagogique.</p>
+            <p style="margin-top:8px;"><strong>Nom du film</strong><br>
+            Projection d'un film entrant, suivie d'un temps d'échange.</p>
+          </div>
+
+          <div class="card card-college">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge college-bg">Collège au cinéma</span>
+              <span class="type-badge">Projection &amp; Échange</span>
+            </div>
+            <p>Présentation d'une œuvre au programme et pistes d'exploitation pour le second degré.</p>
+            <p style="margin-top:8px;"><strong>Nom du film</strong><br>
+            Projection d'un film entrant, suivie d'un temps d'échange.</p>
+          </div>
+
+          <div class="card card-passeurs">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge passeurs-bg">Passeurs d'images</span>
+              <span class="type-badge">Projection &amp; Atelier</span>
+            </div>
+            <p>Analyse collective de productions d'ateliers et réflexion sur les pratiques d'accompagnement.</p>
+            <p style="margin-top:8px;"><strong>Nom du film</strong><br>
+            Projection-débat autour d'un corpus de films d'atelier, suivie d'un temps de travail sur les enjeux de fond et de méthode.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">13h30<br>—<br>14h00</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Ouverture</span>
+          </div>
+          <h3>Ouverture officielle des Rencontres nationales</h3>
+          <p>Mise en contexte de cette nouvelle édition et mot d'accueil des organisateurs·rices et partenaires.</p>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">14h00<br>—<br>16h30</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Échange &amp; Table ronde</span>
+          </div>
+          <h3>Actualité des dispositifs</h3>
+          <p>Point d'étape sur les orientations nationales et temps d'échange direct entre les partenaires institutionnels et les réseaux du terrain.</p>
+          <p style="margin-top:8px;">Rencontre avec les institutions et échange avec la salle.</p>
+        </div>
+      </div>
+
+      <!-- BLOC HIGHLIGHT PHILIPPE MEIRIEU -->
+      <div class="slot">
+        <div class="time">17h00<br>—<br>18h30</div>
+        <div class="card solo highlight">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">En dialogue</span>
+          </div>
+          <h3>Tous les écrans ne se valent pas&nbsp;!</h3>
+          <div class="card-subtitle">Le cinéma, un outil éducatif essentiel</div>
+          <span class="who">Philippe Meirieu<small>Professeur émérite en sciences de l’éducation</small></span>
+          
+          <div class="toggle-hint">
+            <span class="label-text">En savoir plus</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+
+          <div class="collapsible-content">
+            <img src="Meirieu PHOTO.jpg" alt="Philippe Meirieu" class="speaker-photo">
+
+            <h4>Présentation générale</h4>
+            <p>Il est convenu aujourd’hui d’imputer aux « écrans » un ensemble de maux qui frappent la jeunesse : crise de l’attention, baisse du niveau scolaire, enfermement identitaire, etc. Or, de nombreuses recherches montrent que les choses ne sont pas si simples et que tout dépend, à la fois, du contenu, de l’accompagnement des adultes, du type d’écran utilisé et des conditions de leur utilisation. Si l’usage addictif de l’écran numérique individuel peut effectivement poser un certain nombre de problèmes, l’écran de cinéma, au contraire, peut constituer un contrepoint salutaire à un certain nombre de dérives. Sa fréquentation peut être authentiquement éducative. Encore faut-il, cependant, s’interroger sur les conditions pédagogiques qui permettent au cinéma de contribuer à une véritable émancipation des personnes.</p>
+            
+            <h4>Biographie</h4>
+            <p>Philippe MEIRIEU a été instituteur, professeur de collège et de lycée, professeur des universités. Il fut directeur de l’Institut national de recherche pédagogique et de l’Institut universitaire de formation des maîtres de Lyon… Ses travaux portent sur l’École et l’Education populaire ainsi que sur les défis pédagogiques posés par les évolutions sociétales et technologiques.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">19h00<br>—<br>22h30</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Visite &amp; Convivialité</span>
+          </div>
+          <h3>Visite de Lascaux IV</h3>
+          <p>Découverte culturelle suivie d'un temps d'échange informel et d'un dîner partagé.</p>
+          <p style="margin-top:8px;">Dîner pris en commun sur place.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JOUR 2 -->
+  <section class="panel" id="jour2">
+    <h2 class="day-title">Mercredi 25 novembre</h2>
+    <div class="timeline">
+
+      <div class="slot">
+        <div class="time">09h30<br>—<br>12h30</div>
+        <div class="slot-label">En parallèle</div>
+        <div class="grid cols-4">
+          
+          <div class="card">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge tous-bg">Tous dispositifs</span>
+              <span class="type-badge">Forum</span>
+            </div>
+            <h3>Forum 1</h3>
+            <p>Temps de débat collaboratif sur le rôle central de l'exploitation cinématographique.</p>
+            <p style="margin-top:8px;">La salle de cinéma au cœur des dispositifs.</p>
+          </div>
+
+          <div class="card">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge tous-bg">Tous dispositifs</span>
+              <span class="type-badge">Forum</span>
+            </div>
+            <h3>Forum 2</h3>
+            <p>Réflexion partagée autour des synergies entre les acteurs du cinéma et les équipes éducatives.</p>
+            <p style="margin-top:8px;">Formes ancrées et nouvelles du travail partenarial avec l'Éducation nationale.</p>
+          </div>
+
+          <div class="card">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge tous-bg">Tous dispositifs</span>
+              <span class="type-badge">Forum</span>
+            </div>
+            <h3>Forum 3</h3>
+            <p>Analyse des leviers territoriaux pour inscrire l'éducation aux images dans les politiques locales.</p>
+            <p style="margin-top:8px;">Éducation aux images comme service public : le rôle des collectivités et politiques publiques sur les temps de l'enfant.</p>
+          </div>
+
+          <div class="card card-passeurs">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge passeurs-bg">Passeurs d'images</span>
+              <span class="type-badge">Forum</span>
+            </div>
+            <h3>Forum 4</h3>
+            <p>Focus sur la coopération avec les acteurs de la jeunesse en secteur hors temps scolaire.</p>
+            <p style="margin-top:8px;">Publics et institutions hors temps scolaire : comment (ré)associer les services Jeunesse aux projets <i>Passeurs d'images</i> ?</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">14h00<br>—<br>16h30</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Conférence &amp; Rencontre</span>
+          </div>
+          <h3>Comment penser le rire dans les images contemporaines ?</h3>
+          <p>Exploration croisée entre apports théoriques et retours d'expérience de création.</p>
+          <p style="margin-top:8px;">Fabrication, réception et enjeux sociaux de l'humour.</p>
+          <span class="who">Nelly Quemener — conférence introductive<small>Professeure en sciences de l'information et de la communication, Sorbonne Université</small></span>
+          <span class="who">Abel et Gordon — rencontre<small>Cinéastes et comédien·nes</small></span>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">17h00<br>—<br>18h30</div>
+        <div class="slot-label">En parallèle</div>
+        <div class="grid">
+          
+          <div class="card">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge tous-bg">Tous dispositifs</span>
+              <span class="type-badge">Présentation</span>
+            </div>
+            <h3>Présentation des nouveaux films des dispositifs scolaires</h3>
+            <p>Tour d'horizon des œuvres qui rejoindront prochainement les programmations.</p>
+          </div>
+
+          <div class="card card-passeurs">
+            <span class="room-text">Salle ...</span>
+            <div class="badges-container">
+              <span class="device-badge passeurs-bg">Passeurs d'images</span>
+              <span class="type-badge">Réunion</span>
+            </div>
+            <h3>Temps de réunion conviviale</h3>
+            <p>Un moment de partage et d'échange informel dédié au réseau du dispositif.</p>
+            <p style="margin-top:8px;">Réservé au groupe <i>Passeurs d'images</i>.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOC HIGHLIGHT CÉLINE SCIAMMA -->
+      <div class="slot">
+        <div class="time">19h00<br>—<br>21h00</div>
+        <div class="card solo highlight">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Projection &amp; Débat</span>
+          </div>
+          <h3>Revoir Tomboy</h3>
+          <p>Séance exceptionnelle pour redécouvrir une œuvre majeure du répertoire et échanger avec sa réalisatrice.</p>
+          <p style="margin-top:8px;">Projection-débat de la nouvelle version du film, en présence de Céline Sciamma.</p>
+          
+          <div class="toggle-hint">
+            <span class="label-text">En savoir plus</span>
+            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+          </div>
+
+          <div class="collapsible-content">
+            <img src="celine-sciamma.jpg" alt="Céline Sciamma" class="speaker-photo">
+
+            <h4>Présentation de la séance</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut leo velit. Proin gravida nisi at nisl sollicitudin, nec aliquet urna efficitur. Integer nec velit auctor, placerat est vitae, imperdiet vulputate quam.</p>
+            
+            <h4>Biographie de l'intervenante</h4>
+            <p>Réalisatrice et scénariste française reconnue, elle explore avec précision les thématiques du genre et de la jeunesse.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">à partir de<br>21h00</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Soirée</span>
+          </div>
+          <h3>Dîner pris en commun et soirée festive</h3>
+          <p>Temps convivial pour réunir l'ensemble des participant·es des Rencontres.</p>
+          <p style="margin-top:8px;">Centre Culturel de Sarlat.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JOUR 3 -->
+  <section class="panel" id="jour3">
+    <h2 class="day-title">Jeudi 26 novembre</h2>
+    <div class="timeline">
+
+      <div class="slot">
+        <div class="time">09h00<br>—<br>12h00</div>
+        <div class="slot-label">En parallèle</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Atelier</span>
+          </div>
+          <h3>Ateliers de réflexion, de partage d'expériences et de pratique artistique</h3>
+          <p>Mise en pratique et retours d'expériences en petits groupes sur des thématiques ciblées.</p>
+          <p style="margin-top:8px;">Pour cette édition : nouveaux outils pédagogiques et nouvelles ressources pour accompagner les dispositifs ; approches sonores de l'éducation aux images ; EVAR et EVARS ; écriture scénaristique, etc.</p>
+          <div class="note">Un formulaire d'inscription permettant de choisir un des ateliers proposés cette année sera adressé ultérieurement.</div>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">14h00<br>—<br>16h00</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Table ronde</span>
+          </div>
+          <h3>Métiers du cinéma et éducation aux images</h3>
+          <p>Réflexion collective autour des passerelles entre filière professionnelle et transmission.</p>
+          <p style="margin-top:8px;">Autour du projet France Tabac et des expériences d'autres territoires.</p>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">16h00<br>—<br>16h30</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Clôture</span>
+          </div>
+          <h3>Clôture des Rencontres nationales</h3>
+          <p>Synthèse des travaux de ces trois jours et perspectives pour le réseau.</p>
+        </div>
+      </div>
+
+      <div class="slot">
+        <div class="time">Soirée<br>(horaire à<br>confirmer)</div>
+        <div class="slot-label">Prolongations</div>
+        <div class="card solo">
+          <span class="room-text">Salle ...</span>
+          <div class="badges-container">
+            <span class="device-badge tous-bg">Tous dispositifs</span>
+            <span class="type-badge">Projection</span>
+          </div>
+          <h3>Projection d'un film en avant-première</h3>
+          <p>Moment privilégié pour conclure l'événement autour d'une nouveauté cinématographique.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ESPACE RESSOURCES -->
+  <section class="panel" id="ressources">
+    <h2 class="day-title">Espace Ressources</h2>
+    
+    <div class="info-block">
+      <h2>Espace physique et consultation sur place</h2>
+      <p>Un espace dédié avec une table sera installé au cinéma, dans lequel vous pourrez consulter librement une sélection de ressources, telles que des jeux ou des boîtes pédagogiques.</p>
+    </div>
+
+    <div class="info-block" style="margin-top: 30px;">
+      <h2>Fiches ressources en ligne</h2>
+      <p>Retrouvez ci-dessous les liens vers les fiches ressources disponibles sur notre site :</p>
+      <ul>
+        <li><a href="URL_DE_LA_FICHE_1" target="_blank" rel="noopener">Titre de la première fiche ressource</a></li>
+        <li><a href="URL_DE_LA_FICHE_2" target="_blank" rel="noopener">Titre de la deuxième fiche ressource</a></li>
+        <!-- Tu pourras ajouter d'autres balises <li> ici au besoin -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- INFOS PRATIQUES -->
+  <section class="panel" id="infos">
+    <h2 class="day-title">Infos pratiques</h2>
+
+    <div class="info-block">
+      <h2>Lieu</h2>
+      <p>Sarlat, du 24 au 26 novembre 2026.</p>
+    </div>
+
+    <div class="info-block">
+      <h2>Inscription</h2>
+      <p>Gratuite pour les coordinations territoriales des dispositifs. Les inscriptions ouvriront dans le courant du mois de septembre via un formulaire en ligne, envoyé par mail aux coordinations et disponible sur <a href="https://www.archipel-lucioles.fr/" target="_blank" rel="noopener">archipel-lucioles.fr</a>.</p>
+    </div>
+
+    <div class="info-block">
+      <h2>Repas</h2>
+      <ul>
+        <li>Personnel de l'Éducation nationale : déjeuners des 24, 25 et 26 novembre, et dîners des 24 et 25 novembre pris en charge par l'association.</li>
+        <li>Autres coordinations et participant·es hors Éducation nationale : seuls les 2 dîners (24 et 25 novembre) sont pris en charge. Une liste de restaurants conventionnés à tarif préférentiel sera proposée pour les midis.</li>
+      </ul>
+    </div>
+
+    <div class="info-block">
+      <h2>Déplacement et hébergement</h2>
+      <p>À la charge de vos services. Une liste d'hôtels sera fournie aux coordinateur·rices par l'association.</p>
+    </div>
+
+    <div class="info-block">
+      <h2>Organisation</h2>
+      <p class="partners">Rencontres organisées par l'association nationale L'Archipel des lucioles, en partenariat avec Ciné Passion en Périgord, la DSDEN et la DAAC de l'académie de Bordeaux, ALCA, la Ville de Sarlat, l'Office de tourisme Sarlat-Périgord Noir, la Communauté de Communes Sarlat-Périgord Noir, le Département de la Dordogne, la Région Nouvelle-Aquitaine et la DRAC Nouvelle-Aquitaine.</p>
+      <p class="partners">Avec le soutien des ministères de la Culture et de l'Éducation nationale, de l'Enseignement supérieur et de la Recherche, de l'ANCT et du CNC.</p>
+    </div>
+
+    <div class="info-block">
+      <h2>Contacts</h2>
+      <div class="contact-row">
+        <div><strong>Charlotte Carbo</strong><a href="mailto:charlotte@archipel-lucioles.fr">charlotte@archipel-lucioles.fr</a></div>
+        <div><strong>Nando Gizzi</strong><a href="mailto:nando@archipel-lucioles.fr">nando@archipel-lucioles.fr</a></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SECTION PARTENAIRES -->
+  <section class="partners-section">
+    <div class="partners-group">
+      <h3>Avec le soutien de</h3>
+      <div class="logos-grid">
+        <a href="https://www.gouvernement.fr/" target="_blank" rel="noopener" title="Gouvernement">
+          <img src="Gouvernement_RVB.png" alt="Gouvernement">
+        </a>
+        <a href="https://www.cnc.fr/" target="_blank" rel="noopener" title="CNC">
+          <img src="CNC fond clair.jpg" alt="CNC">
+        </a>
+        <a href="https://agence-cohesion-territoires.gouv.fr/" target="_blank" rel="noopener" title="ANCT">
+          <img src="logo anct.jpg" alt="ANCT">
+        </a>
+      </div>
+    </div>
+
+    <div class="partners-group">
+      <h3>En partenariat avec</h3>
+      <div class="logos-grid">
+        <!-- Ajout du Cinéma Le Rex en premier -->
+        <a href="#" target="_blank" rel="noopener" title="Cinéma Le Rex">
+          <img src="cinéma2.jpg" alt="Cinéma Le Rex">
+        </a>
+        <a href="https://cine-passion24.com/" target="_blank" rel="noopener" title="Ciné Passion en Périgord">
+          <img src="cinépassion2.png" alt="Ciné Passion en Périgord">
+        </a>
+        <a href="https://alca-nouvelle-aquitaine.fr/" target="_blank" rel="noopener" title="ALCA Nouvelle-Aquitaine">
+          <img src="Alca_Logotype.jpg" alt="ALCA Nouvelle-Aquitaine">
+        </a>
+        <a href="https://www.sarlat.fr/" target="_blank" rel="noopener" title="Ville de Sarlat">
+          <img src="Ville de Sarlat.png" alt="Ville de Sarlat">
+        </a>
+        <a href="https://www.sarlat-tourisme.com/" target="_blank" rel="noopener" title="Office de tourisme de Sarlat">
+          <img src="logo-office-du-tourisme-sarlat-périgord-noir.png" alt="Office de tourisme de Sarlat">
+        </a>
+        <a href="https://www.cc-sarlatperigordnoir.fr/" target="_blank" rel="noopener" title="Communauté de communes de Sarlat Périgord Noir">
+          <img src="commuanuté de communes 2.png" alt="Communauté de communes de Sarlat Périgord Noir">
+        </a>
+        <a href="https://www.dordogne.fr/" target="_blank" rel="noopener" title="Département de la Dordogne">
+          <img src="dordogne2.png" alt="Département de la Dordogne">
+        </a>
+        <a href="https://www.nouvelle-aquitaine.fr/" target="_blank" rel="noopener" title="Région Nouvelle-Aquitaine">
+          <img src="région 2.png" alt="Région Nouvelle-Aquitaine">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Pré-programme — sujet à modifications. L'Archipel des lucioles, 2026.</footer>
+
+</div>
+
+<script>
+  // Navigation par onglets
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.panel');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.target).classList.add('active');
+      window.scrollTo({top: 0, behavior:'smooth'});
+    });
+  });
+
+  // Gestion du clic pour ouvrir/fermer les blocs highlight
+  const highlightCards = document.querySelectorAll('.card.highlight');
+  highlightCards.forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('open');
+      const label = card.querySelector('.label-text');
+      if(label) {
+        label.textContent = card.classList.contains('open') ? 'Masquer les détails' : 'En savoir plus';
+      }
+    });
+  });
+</script>
+</body>
+</html>
